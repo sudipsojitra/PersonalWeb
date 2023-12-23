@@ -8,6 +8,8 @@
 
 body {
     color: #ededed;
+    background: #081b29;
+    ;
 }
 
 .header {
@@ -15,7 +17,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
+    padding: 25px 8%;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -35,21 +37,21 @@ body {
     color: #ededed;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 30px;
     transition: .3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #00abf0;
+    color: #081b29;
 }
 
 .home {
     height: 100vh;
-    background: url('../img/home1.png') no-repeat;
+    background: url('../img/home5.png') no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 0 10%;
+    padding: 0 8%;
     display: flex;
     align-items: center;
 }
@@ -73,6 +75,7 @@ body {
 .home-content p {
     font-size: 16px;
     margin: 20px 0 40px;
+    line-height: 1.7;
 }
 
 .home-content .btn-box {
