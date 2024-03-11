@@ -657,9 +657,15 @@ span {
     html {
         font-size: 55%;
     }
+    .btn-box .btn-size {
+        width: 130px;
+    }
 }
 
 @media (max-width: 991px) {
+    .btn-box .btn-size {
+        width: 130px;
+    }
     .header {
         padding: 2rem 4%;
     }
