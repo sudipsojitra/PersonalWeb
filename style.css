@@ -657,6 +657,15 @@ span {
     cursor: pointer;
 }
 
+span.msg {
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 
 /* footer css */
 

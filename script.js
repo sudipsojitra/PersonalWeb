@@ -47,3 +47,19 @@ window.onscroll = () => {
     let footer = document.querySelector('footer');
     footer.classList.toggle('show-animate', (this.innerHeight + this.scrollY + 1) >= document.scrollingElement.scrollHeight);
 }
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyzJcBo6U04T9D8v-gJcRv9cw8SA1EIGtYJNOaCYn-6C82fqQt1w8e0O59nMKuXlw1a/exec'
+const form = document.forms['submitForm']
+const msg = document.getElementById('msg')
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message send successfully"
+            setTimeout(function() {
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})
