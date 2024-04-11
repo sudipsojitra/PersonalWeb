@@ -17,7 +17,9 @@ window.onscroll = () => {
         let offset = sec.offsetTop - 100;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-
+        console.log("top " + top);
+        console.log("offset" + offset);
+        console.log("height" + height);
         if (top >= offset && top < offset + height) {
             // active navbar links
             navLinks.forEach(links => {
