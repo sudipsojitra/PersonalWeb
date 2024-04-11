@@ -51,14 +51,23 @@ window.onscroll = () => {
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyzJcBo6U04T9D8v-gJcRv9cw8SA1EIGtYJNOaCYn-6C82fqQt1w8e0O59nMKuXlw1a/exec'
 const form = document.forms['submitForm']
 const msg = document.getElementById('msg')
+const submitButton = document.getElementById('submitBtn');
+const loader = document.getElementById('loader');
+
 form.addEventListener('submit', e => {
     e.preventDefault()
+    submitButton.disabled = true;
+    loader.style.display = 'inline-block';
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
+
+    .then(response => {
             msg.innerHTML = "Message send successfully"
             setTimeout(function() {
                 msg.innerHTML = ""
-            }, 5000)
+            }, 4000)
+            submitButton.disabled = false;
+            loader.style.display = 'none';
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))
