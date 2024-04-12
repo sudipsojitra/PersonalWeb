@@ -74,3 +74,17 @@ form.addEventListener('submit', e => {
         })
         .catch(error => console.error('Error!', error.message))
 })
+
+var moon = document.getElementById('iconDark');
+var favIcon = document.getElementById('favIcon');
+moon.onclick = function() {
+    document.body.classList.toggle("light-theam");
+    if (document.body.classList.contains("light-theam")) {
+        moon.innerHTML = '<i class="bx bxs-moon"></i>';
+        favIcon.src = "assets/img/light.png";
+    } else {
+        moon.innerHTML = '<i class="bx bxs-sun"></i>';
+        favIcon.src = "assets/img/favicon.png";
+
+    }
+}

@@ -17,6 +17,13 @@
     --main-color: #00abf0;
 }
 
+.light-theam {
+    --bg-color: #ADBC9F;
+    --second-bg-color: #f9f9ef;
+    --text-color: #12372A;
+    --main-color: #436850;
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -55,11 +62,13 @@ body {
 
 .navbar {
     position: relative;
+    text-align: right;
+    flex: 1;
 }
 
 .navbar a {
     font-size: 18px;
-    color: #ededed;
+    color: var(--text-color);
     font-weight: 500;
     margin-left: 3.5rem;
     transition: .3s;
@@ -71,11 +80,18 @@ body {
 }
 
 #menu-icon {
+    flex: 1;
+    text-align: right;
     position: relative;
     font-size: 3.6rem;
     color: var(--text-color);
     cursor: pointer;
     display: none;
+}
+
+.iconDark {
+    font-size: 20px;
+    margin-left: 3.5rem;
 }
 
 section {
