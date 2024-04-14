@@ -81,7 +81,7 @@ moon.onclick = function() {
     document.body.classList.toggle("light-theam");
     if (document.body.classList.contains("light-theam")) {
         moon.innerHTML = '<i class="bx bxs-moon"></i>';
-        favIcon.src = "assets/img/alight.png";
+        favIcon.src = "assets/img/black.png";
     } else {
         moon.innerHTML = '<i class="bx bxs-sun"></i>';
         favIcon.src = "assets/img/favicon.png";

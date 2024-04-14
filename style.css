@@ -15,13 +15,23 @@
     --second-bg-color: #112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
+    --loader-color: #ededed;
 }
 
-.light-theam {
+
+/* .light-theam {
     --bg-color: #ADBC9F;
     --second-bg-color: #f9f9ef;
     --text-color: #12372A;
     --main-color: #436850;
+} */
+
+.light-theam {
+    --bg-color: #fff;
+    --second-bg-color: #F1F1F1;
+    --text-color: #000;
+    --main-color: #000;
+    --loader-color: #AAAAAA;
 }
 
 html {
@@ -69,13 +79,14 @@ body {
 .navbar a {
     font-size: 18px;
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 400;
     margin-left: 3.5rem;
     transition: .3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
+    font-weight: 700;
     color: var(--main-color);
 }
 
@@ -690,7 +701,7 @@ span.msg {
     aspect-ratio: 1;
     border-radius: 50%;
     /* padding: 1px; */
-    background: conic-gradient(#0000 10%, var(--main-color)) content-box;
+    background: conic-gradient(#0000 10%, var(--loader-color)) content-box;
     -webkit-mask: repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg), radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
     -webkit-mask-composite: destination-in;
     mask-composite: intersect;
