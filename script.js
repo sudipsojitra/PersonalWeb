@@ -88,3 +88,18 @@ moon.onclick = function() {
 
     }
 }
+
+ScrollReveal({
+    reset: true,
+    distance: '40px',
+    duration: 1500,
+    delay: 100
+});
+ScrollReveal().reveal('.navbar, .logo-img, .logo', { reset: false, origin: 'right' });
+ScrollReveal().reveal('.logo-img, .logo', { reset: false, origin: 'left' });
+
+
+ScrollReveal().reveal('.heading', { origin: 'top' });
+ScrollReveal().reveal('.home-content, .about-content, .message, .submit', { origin: 'bottom' });
+ScrollReveal().reveal('.heading-name, .about-img, .education-column-left, .coding-skills, .firstname, .mobile-no, .footer-text', { origin: 'left' });
+ScrollReveal().reveal('.education-column-right, .professional-skills, .email, .email-sub, .footer-iconTop', { origin: 'right' });
