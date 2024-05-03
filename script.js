@@ -17,9 +17,6 @@ window.onscroll = () => {
         let offset = sec.offsetTop - 100;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
-        console.log("top " + top);
-        console.log("offset" + offset);
-        console.log("height" + height);
         if (top >= offset && top < offset + height) {
             // active navbar links
             navLinks.forEach(links => {
@@ -80,10 +77,10 @@ var favIcon = document.getElementById('favIcon');
 moon.onclick = function() {
     document.body.classList.toggle("light-theam");
     if (document.body.classList.contains("light-theam")) {
-        moon.innerHTML = '<i class="bx bxs-moon"></i>';
-        favIcon.src = "assets/img/black.png";
+        moon.innerHTML = 'Dark Mode';
+        favIcon.src = "assets/img/alight.png";
     } else {
-        moon.innerHTML = '<i class="bx bxs-sun"></i>';
+        moon.innerHTML = 'Light mode';
         favIcon.src = "assets/img/favicon.png";
 
     }
@@ -95,11 +92,11 @@ ScrollReveal({
     duration: 1500,
     delay: 100
 });
-ScrollReveal().reveal('.navbar, .logo-img, .logo', { reset: false, origin: 'right' });
-ScrollReveal().reveal('.logo-img, .logo', { reset: false, origin: 'left' });
+// ScrollReveal().reveal('.navbar, .logo-img, .logo', { reset: false, origin: 'right' });
+// ScrollReveal().reveal('.logo-img, .logo', { reset: false, origin: 'left' });
 
 
 ScrollReveal().reveal('.heading', { origin: 'top' });
 ScrollReveal().reveal('.home-content, .about-content, .message, .submit', { origin: 'bottom' });
-ScrollReveal().reveal('.heading-name, .about-img, .education-column-left, .coding-skills, .firstname, .mobile-no, .footer-text', { origin: 'left' });
-ScrollReveal().reveal('.education-column-right, .professional-skills, .email, .email-sub, .footer-iconTop', { origin: 'right' });
+ScrollReveal().reveal('.heading-name, .about-img, .education-column-left, .coding-skills, .firstname, .mobile-no', { origin: 'left' });
+ScrollReveal().reveal('.education-column-right, .professional-skills, .email, .email-sub', { origin: 'right' });
