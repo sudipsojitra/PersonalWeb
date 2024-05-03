@@ -962,9 +962,6 @@ section:nth-child(odd) .animate.scroll,
     html {
         font-size: 50%;
     }
-    .header {
-        width: 94.6%;
-    }
     .home-content h1 {
         display: flex;
         flex-direction: column;
