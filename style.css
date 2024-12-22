@@ -483,17 +483,17 @@ span {
     width: 100%;
 }
 
-.education-content .content .year {
+.education-content .content .year, .projects-content .year {
     font-size: 1.5rem;
     color: var(--main-color);
     padding-bottom: .5rem;
 }
 
-.education-content .content .year i {
+.education-content .content .year i, .projects-content .year i{
     padding-right: .5rem;
 }
 
-.education-content .content h3 {
+.education-content .content h3,  .projects-content .progress h3{
     font-size: 2rem;
 }
 
@@ -555,7 +555,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     z-index: -1;
     transition: .5s;
 }
@@ -594,11 +594,11 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-    width: 65%;
+    width: 90%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-    width: 90%;
+    width: 65%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
@@ -606,7 +606,7 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 75%;
+    width: 85%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
@@ -618,19 +618,99 @@ span {
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-    width: 70%;
+    width: 85%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-    width: 65%;
+    width: 75%;
 }
 
+
+/* Projects section css */
+
+.projects {
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+.projects a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+.projects h2 {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.projects .projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.projects-row .projects-column {
+    flex: 1 1 40rem;
+}
+
+.projects-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 0 1.5rem;
+}
+
+.projects-box .projects-content {
+    position: relative;
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    margin-top: 10px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.projects-column .projects-box {
+    position: relative;
+}
+
+.projects-box .projects-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.projects-box .projects-content:hover::before {
+    width: 100%;
+}
+
+.projects-content .progress {
+    padding: 1rem 0;
+}
+
+.projects-content .progress h3 {
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projects-content .projects-sub-content {
+    margin-top: 5px;
+    font-size: 1.6rem;
+}
 
 /* contact css */
 
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    background: var(--second-bg-color);
+
 }
 
 .contact h2 {
@@ -681,7 +761,7 @@ span {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .6rem;
     z-index: -1;
     transition: .5s;
@@ -757,7 +837,6 @@ span.msg {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
 }
 
 .footer-text,

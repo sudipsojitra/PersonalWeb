@@ -72,19 +72,19 @@ form.addEventListener('submit', e => {
         .catch(error => console.error('Error!', error.message))
 })
 
-// var moon = document.getElementById('iconDark');
-// var favIcon = document.getElementById('favIcon');
-// moon.onclick = function() {
-//     document.body.classList.toggle("light-theam");
-//     if (document.body.classList.contains("light-theam")) {
-//         moon.innerHTML = 'Dark Mode';
-//         favIcon.src = "assets/img/alight.png";
-//     } else {
-//         moon.innerHTML = 'Light mode';
-//         favIcon.src = "assets/img/favicon.png";
+var moon = document.getElementById('iconDark');
+var favIcon = document.getElementById('favIcon');
+moon.onclick = function() {
+    document.body.classList.toggle("light-theam");
+    if (document.body.classList.contains("light-theam")) {
+        moon.innerHTML = 'Dark Mode';
+        favIcon.src = "assets/img/alight.png";
+    } else {
+        moon.innerHTML = 'Light mode';
+        favIcon.src = "assets/img/favicon.png";
 
-//     }
-// }
+    }
+}
 
 ScrollReveal({
     reset: true,
@@ -97,6 +97,6 @@ ScrollReveal({
 
 
 ScrollReveal().reveal('.heading', { origin: 'top' });
-ScrollReveal().reveal('.home-content, .about-content, .message, .submit', { origin: 'bottom' });
-ScrollReveal().reveal('.heading-name, .about-img, .education-column-left, .coding-skills, .firstname, .mobile-no', { origin: 'left' });
-ScrollReveal().reveal('.education-column-right, .professional-skills, .email, .email-sub', { origin: 'right' });
+ScrollReveal().reveal('.home-content, .about-content, .message, .submit, .bachelor-projects', { origin: 'bottom' });
+ScrollReveal().reveal('.heading-name, .about-img, .education-column-left, .coding-skills, .firstname, .mobile-no, .company-projects', { origin: 'left' });
+ScrollReveal().reveal('.education-column-right, .professional-skills, .email, .email-sub, .master-projects', { origin: 'right' });
